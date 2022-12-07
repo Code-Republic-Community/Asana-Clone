@@ -13,7 +13,7 @@ def signin():
     login = data['login']
     password = data['password']
 
-    con = sqlite3.connect("etl.db")
+    con = """db""".connect("etl.db")
     cur = con.cursor()
 
     query = "SELECT user_id FROM users WHERE (login=? OR email=?) AND password=?"
